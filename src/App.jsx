@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,8 +8,13 @@ import Nav from './Nav';
 import Topics from './Topics';
 import Hook from './Hook';
 import Comp from './Comp';
+import Async from './Async';
 
 export default function App() {
+  useEffect(() => {
+    console.log('app is mounted or updated');
+  })
+
   return (
     <Router>
       <div>
@@ -31,6 +36,9 @@ export default function App() {
           </Route>
           <Route path='/comp'>
             <Comp />
+          </Route>
+          <Route path='/async'>
+            <Async />
           </Route>
           <Route path='/'>
             <Home />

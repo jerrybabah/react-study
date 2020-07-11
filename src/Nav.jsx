@@ -23,6 +23,9 @@ export default function Nav() {
         <li>
           <Link to='/comp'>Comp</Link>
         </li>
+        <li>
+          <Link to='/async'>Async</Link>
+        </li>
       </ul>
     </nav>
   )
